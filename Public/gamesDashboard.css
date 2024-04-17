@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Figtree:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+.dark-bg {
+  background-image: url(./gamesDashboard/bg.png);
+  background-color: #1e1e1e;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main {
+  font-family: "Product Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  padding: 0;
+  /* margin-top: 10vh; */
+}
+
+.main-upper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-upper .title {
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 3;
+  justify-content: space-around;
+}
+
+.game-tile {
+  display: flex;
+  margin: 20px;
+  background-color: rgba(217, 217, 217, 0.05);
+  width: 380px;
+  height: 440px;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+@media (min-width: 1000px) {
+  .game-tile {
+    width: 380px;
+    height: 440px;
+  }
+}
+@media (min-width: 1600px) {
+  .game-tile {
+    height: 400px;
+    width: 700px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .game-upper .game-img img {
+    height: 300px;
+    width: 300px;
+  }
+  .play {
+    padding: 15px 200px 15px 200px;
+  }
+  .game-title {
+    font-size: 60px;
+  }
+}
+.game-upper {
+  display: flex;
+  justify-content: center;
+  /* flex: 2; */
+}
+
+.game-title {
+  font-family: "Product Sans Medium", sans-serif;
+  font-size: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.game-lower {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.play {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: "Product Sans Medium", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 60px;
+  padding: 15px 120px 15px 120px;
+  cursor: pointer;
+}
+
+.play:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}

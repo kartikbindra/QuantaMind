@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+  background-color: #1e1e1e;
+  background-image: url("/Quotes/bg.png");
+  background-size: cover;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.quote-title {
+  font-size: 3rem;
+  color: #fff;
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Product Sans", sans-serif;
+}
+
+.main-quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;  
+  width: 75%;
+}
+
+.quote {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: "Product Sans Medium", serif;
+
+}
+
+.author {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: "Product Sans", sans-serif;
+  text-align: center;
+  margin-top: 1rem;
+}

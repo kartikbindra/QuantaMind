@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuantaMind</title>
+    <link rel="stylesheet" href="/signup.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-left">
+        <div class="logo">
+          <img src="/signUp/quantamind (1) 1.png" alt="" />
+          <div>QUANTAMIND</div>
+        </div>
+      </div>
+
+      <div class="main-right">
+        <div class="signup-page">
+          <div class="signup-title">
+            Sign Up <br />
+            <span>Create an account</span>
+          </div>
+          <div class="third-party">
+            <div class="third-party-icons">
+              <div class="icon">
+                <img src="/signUp//logo_googleg_48dp.png" alt="" />
+              </div>
+              <div class="icon">
+                <img src="/signUp/Apple_logo_black.png" alt="" />
+              </div>
+              <div class="icon">
+                <img src="/signUp/f_logo_RGB-Blue_58.png.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="or">
+            <div class="line"></div>
+            &nbsp;&nbsp;Or&nbsp;&nbsp;
+            <div class="line"></div>
+          </div>
+          <div class="disc">
+            Sign up with your email <br />
+            Already have an account? <a href="/login">Sign In</a>
+          </div>
+          <form id="signupForm" method = "post" action="/signup">
+            <div class="input">
+              <label for="Name">Name</label>
+              <input type="text" id="Name" name="name"/>
+            </div>
+            <div class="input">
+              <label for="email">Email address</label>
+              <input type="text" id="email" name="email"/>
+            </div>
+            <div class="input">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password"/>
+            </div>
+            <!-- <div class="input">
+              <label for="password">Confirm Password</label>
+            <input type="password" id="confirm-password" />
+            </div> -->
+
+            <div class="terms">
+              <input type="checkbox" required/>
+              By signing in to QuantaMind, you agree to our Terms and Privacy
+              Policy.
+            </div>
+            <button class="btn">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
