@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { router } from "./meditation/server.js";
+// import { router } from "./meditation/server.js";
 import cors from "cors";
 import bodyparser from "body-parser";
 import { v4 as uuid4 } from "uuid";
@@ -227,8 +227,6 @@ app.get("/resources/music", (req, res) => {
   res.sendFile(__dirname + "/views/music.html");
 });
 
-app.use("/meditate", router);
-
 app.get("/journal", (req, res) => {
   console.log("Journal Page Pe aa gya bhai Tu!");
   res.sendFile(__dirname + "/views/journal.html");
@@ -394,6 +392,17 @@ app.post("/fetchDate", async (req, res) => {
   catch(e){
     console.log(e);
   }
+});
+
+app.get('/meditate', (req,res) => {
+  res.render('home');
+});
+
+app.get('/meditate/:duration/:category', (req,res) => {
+  let duration = req.params.duration;
+  let category = req.params.category;
+  // console.log(`duration: ${duration} \n category: ${category}`);
+  res.render('meditate', {duration: duration, category: category});
 });
 
 app.get("/dailyChallenges/wordle", (req, res) => {
