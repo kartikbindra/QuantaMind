@@ -44,6 +44,8 @@ body{
     position: fixed;
     bottom: 20px;
     right: 25%;
+    z-index: 20;
+    cursor: pointer;
 }
 
 .journal{

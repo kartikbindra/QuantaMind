@@ -25,7 +25,6 @@ const db = new pg.Client({
   database: "defaultdb",
   ssl:{
     rejectUnauthorized: false,
-  
   }
 });
 
@@ -35,6 +34,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "Public")));
+app.set("views", path.join(__dirname, "views"));
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
@@ -253,10 +253,11 @@ app.post("/emotions", async (req, res) => {
   const title = req.body.title;
   let result = await query1(data);
   const emotion = result[0][0]["label"];
+  const journal_id = uuid4();
   // res.send(result[0][0]["label"]);
   try{
     await db.query(
-        "INSERT INTO journals (title, body, user_id, created_at, emotion) VALUES ($1, $2, $3, $4, $5)", [title, data, user_id, new Date(), emotion]
+        "INSERT INTO journals (id, title, body, user_id, created_at, emotion) VALUES ($1, $2, $3, $4, $5, $6)", [journal_id, title, data, user_id, new Date(), emotion]
     );
     res.redirect("/journal");
   }
