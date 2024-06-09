@@ -142,7 +142,8 @@ app.post("/login", async (req, res) => {
 
 app.get("/landing", (req, res) => {
   console.log("landing Page Pe aa gya bhai Tu!");
-  res.sendFile(__dirname + "/views/landing.html");
+  // res.sendFile(__dirname + "/views/landing.html");
+  res.sendFile(__dirname + "/views/comingsoon.html");
 });
 
 app.get("/", async (req, res) => {
