@@ -114,6 +114,7 @@ html {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  scale: 80%;
 }
 
 .progress-bar {

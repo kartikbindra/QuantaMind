@@ -115,6 +115,10 @@ getScores().then((data) => {
     info.style.display = "block";
     pageEles.style.display = "none";
   }
+  const meterScore = document.querySelector(".mentalMeterValue");
+  const helpScore = document.querySelector(".helpMeterValue");
+  meterScore.innerHTML = ((mentalWellScore/45)*100).toPrecision(3) + "%";
+  helpScore.innerHTML = ((helpQuotient/100)*100).toPrecision(3) + "%";
   rotate("meterPin1", caldeg(mentalWellScore, 45));
   rotate("meterPin2", caldeg(helpQuotient, 30));
 }

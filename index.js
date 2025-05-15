@@ -146,6 +146,22 @@ app.get("/landing", (req, res) => {
   // res.sendFile(__dirname + "/views/comingsoon.html");
 });
 
+// Middleware to extract subdomain
+const subdomainMiddleware = (req, res, next) => {
+  const host = req.headers.host;
+  const subdomain = host.split('.')[0];
+  req.subdomain = subdomain;
+  next();
+};
+
+// write hello world on a subdomain like subdomain.quantamind.dev
+// Route for the subdomain
+// app.get('/', (req, subdomainMiddleware, res) => {
+//   if (req.subdomain === 'figureout') {
+//     res.send('Hello from the subdomain!');
+//   }
+// });
+
 app.get("/comingsoon", (req, res) => {
   // res.sendFile(__dirname + "/views/landing.html");
   res.sendFile(__dirname + "/views/comingsoon.html");

@@ -43,7 +43,8 @@ body {
 .signup-page {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  justify-content: center;
   padding: 5%;
   height: 70%;
   width: 50%;
@@ -153,7 +154,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 40px;
-  width: 25%;
+  width: 100%;
   background-color: #000;
   color: #fff;
   font-family: "Product Sans Medium", sans-serif;
@@ -162,6 +163,12 @@ body {
   border-radius: 60px;
   cursor: pointer;
   margin-bottom: 10px;
+}
+.btn:hover {
+  background-color: #00000075;
+  color: #fff;
+  /* border: 1px solid #000; */
+  transition: 0.3s;
 }
 .logo img {
   animation: float 3s infinite;
